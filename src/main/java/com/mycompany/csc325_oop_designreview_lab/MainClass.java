@@ -4,6 +4,8 @@
 
 package com.mycompany.csc325_oop_designreview_lab;
 
+import java.util.Scanner;
+
 /**
  *
  * @author MoaathAlrajab
@@ -11,34 +13,32 @@ package com.mycompany.csc325_oop_designreview_lab;
 public class MainClass {
 
  public static void main(String[] args) {
-		// ToDo 5: Fix the error
-
-		// ToDo 6: Fix the constructor of the Student class
-
-                // Todo 7: Create two classes for Freshman and Senior 
-
-                // ToDo 8: The senior class should have a minimum of 85 credits  
-
-		// ToDo 9: Add a toString method for the Student class
-		// ToDo 10: Add a toString method for the Freshman class
-
-		Student std1= new Student("James", 20);
-                // ToDo 11: Add a toString method for the Senior class
-
-		Freshman std1= new Student("James", 20, 12); // name, age, credits
-
-                Senior std2 = new Student("John", 30, 90);
-
-		// ToDo 12: Set the gpa of the student using the scanner and user
-		// 			input and then print the output.
-
-		System.out.println(std1);
-
-                System.out.println(std2);
-
-		// ToDo 13: add comments and explain your code
-
+	 // creates instance of Student in variable std1
+	 // holds name of student James, age 20
+	 Student std1= new Student("James",  (short) 20);
+	 // creates instance of Freshman in variable std2
+	 // holds name of freshman Jake, age 20 and with 12 credits
+	 Freshman std2= new Freshman("Jake", (short) 20, 12);
+	 // creates instance of Senior in variable std3
+	 // holds names of senior John, age 30 and with 90 credits
+	 Senior std3 = new Senior("John", (short) 30, 90);
+	 // declare new Scanner scnr
+	 Scanner scnr = new Scanner(System.in);
+	 // asks user to input gpa for student
+	 System.out.print("Enter GPA for student " + std1.getName() + ": ");
+	 double gpas1 = scnr.nextDouble(); // assigns user input to gpas1
+	 std1.setGpa(gpas1); // stores the gpa by calling the set method
+	 System.out.println(std1); // prints the toString for student
+	 // asks user to input gpa for freshman
+	 System.out.print("Enter GPA for freshman " + std2.getName() + ": ");
+	 double gpas2 = scnr.nextDouble(); // assigns user input to gpas2
+	 std2.setGpa(gpas2); // stores the gpa by calling the set method
+	 System.out.println(std2); // prints the toString for freshman
+	 // asks user input for senior
+	 System.out.print("Enter GPA for senior " + std3.getName() + ": ");
+	 double gpas3 = scnr.nextDouble(); // assigns user input to gpas3
+	 std3.setGpa(gpas3); // stores the gpa by calling the set method
+	 System.out.println (std3); // prints the toString for senior
 	}
-
 }
 
